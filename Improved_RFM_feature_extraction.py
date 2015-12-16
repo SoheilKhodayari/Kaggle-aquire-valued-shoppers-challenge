@@ -1,6 +1,6 @@
 ########################################################################
 #  Task:     This script generates appropriate features for the data.  #
-#	     It also calls a specific function so as to reduce the         #
+#	     It also calls a specific function so as to reduce the     #
 #            dataset size.                                             #
 #                                                                      #
 #  Input: loction of dataset files                                     #

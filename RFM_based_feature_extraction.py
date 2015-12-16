@@ -1,6 +1,6 @@
 ########################################################################
 #  Task:     This script generates appropriate features for the data.  #
-#	     reads the .CSV files chunk by chunk to tweak memory           #
+#	         reads the .CSV files chunk by chunk to tweak memory       #
 #            limits and to gain speed.                                 #
 #                                                                      #
 #  Input: loction of dataset files                                     #

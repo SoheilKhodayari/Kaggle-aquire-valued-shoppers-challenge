@@ -1,0 +1,13 @@
+
+1 - command line for train:
+
+vw workspace/train.vw -c -k --passes 40 -l 0.85 -f workspace/model.vw --loss_function quantile --quantile_tau 0.6
+
+2 - command line for test:
+
+vw workspace/test.vw -t -i workspace/model.vw -p workspace/predictions.txt
+
+3 - command line for generating vw-varinfo feature relevance:
+
+vw-varinfo workspace/train.vw > varinfo/result.varinfo.vw
+ 

@@ -32,7 +32,22 @@ plotted using this file <br />
 considering some hueristical features to obtain better performance.<br />
 * *submission.py*:transforms the final generated file predictions.txt into a kaggle submission file.<br />
 
+## Installing prerequisites
+
+1) Make Sure you have Python 2.7 Installed <br />
+2) You'll then need to install numpy, scipy and matplotlib modules of python. <br />
+In ubuntu you can install them with this command:
+
+    sudo apt-get install python-numpy python-scipy python-matplotlib
+    
+If you are on windows, then you might use pip in this order:<br />
+```pip install numpy ```<br />
+```pip install scipy  ```<br />
+```pip install matplotlib ```<br />
+
+
 ## How to run?
+
 A step by step process to run the code is listed below: <br />
 
 1) run Improved_RFM_feature_extraction.py file: <br />
@@ -75,7 +90,7 @@ to test the model. the output file will be saved to
 workspace as predictions.txt<br />
 
 
-6)finally, run the file submission.py<br />
+6) finally, run the file submission.py<br />
 
     python submission.py
 

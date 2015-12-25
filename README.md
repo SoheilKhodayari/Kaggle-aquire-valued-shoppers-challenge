@@ -48,7 +48,7 @@ If you are on windows, then you might use pip in this order:<br />
 
 3)(optional) install scikit-learn for AUC evaluation.
                 
-    see https://pypi.python.org/pypi/scikit-learn/0.15.2 for tutorial on how to install.
+see https://pypi.python.org/pypi/scikit-learn/0.15.2 for tutorial on how to install.<br />
 
 
 ## How to run?
@@ -82,7 +82,7 @@ our model in a human readable form.<br />
     python histogram.py
     
 by the end of this step, vm-varinfo outputs
-will be converted to visual images by ploting.<br />
+will be converted to visual images by ploting.<br /><br />
 
 see https://github.com/JohnLangford/vowpal_wabbit/wiki/using-vw-varinfo for more.<br />
 

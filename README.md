@@ -31,6 +31,7 @@ plotted using this file <br />
 * *Improved_RFM_feature_extraction.py*: not only extracting RFM features but also
 considering some hueristical features to obtain better performance.<br />
 * *submission.py*:transforms the final generated file predictions.txt into a kaggle submission file.<br />
+* *Evaluation*: contains files needed for evaluating results <br />
 
 ## Installing prerequisites
 
@@ -44,6 +45,10 @@ If you are on windows, then you might use pip in this order:<br />
 ```pip install numpy ```<br />
 ```pip install scipy  ```<br />
 ```pip install matplotlib ```<br />
+
+3)(optional) install scikit-learn for AUC evaluation.
+                
+    see https://pypi.python.org/pypi/scikit-learn/0.15.2 for tutorial on how to install.
 
 
 ## How to run?
@@ -100,6 +105,15 @@ all we need to do after step 5 is to convert our predictions.txt <br />
 into a kaggle submission .csv format.This is achieved in this step.<br />
 
 See https://kaggle.com for submission sample.
+
+8) (optional) In case you need to evaluate results yourself, you then need to run the files <br />
+in the evaluation directory.To this, we first divide the train file, half for training and<br />
+half for testing, using the results for evaluation. after following previous steps for this<br />
+newly generated files, we then add expected labels for the newly submission.csv file created <br />
+using combineExpected.py. then eval.py is all we need to do our evaluations<br />
+
+see http://scikit-learn.org/stable/modules/model_evaluation.html for more on evaluation
+
 
 
 ## Vowpal Wabbit:

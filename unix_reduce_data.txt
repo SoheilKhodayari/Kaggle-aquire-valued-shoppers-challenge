@@ -1,0 +1,38 @@
+# Code is below. It is a combo of grep and R
+
+# Unix script for getting transactions where category is in at least one offer. 
+# WARNING, this will pick up some junk rows and maybe even duplicate rows because of grep matching other parts of the row.
+
+grep ",706," transactions > trans_cat.csv
+grep ",799," transactions >> trans_cat.csv
+grep ",1703," transactions >> trans_cat.csv
+grep ",1726," transactions >> trans_cat.csv
+grep ",2119," transactions >> trans_cat.csv
+grep ",2202," transactions >> trans_cat.csv
+grep ",3203," transactions >> trans_cat.csv
+grep ",3504," transactions >> trans_cat.csv
+grep ",3509," transactions >> trans_cat.csv
+grep ",4401," transactions >> trans_cat.csv
+grep ",4517," transactions >> trans_cat.csv
+grep ",5122," transactions >> trans_cat.csv
+grep ",5558," transactions >> trans_cat.csv
+grep ",5616," transactions >> trans_cat.csv
+grep ",5619," transactions >> trans_cat.csv
+grep ",5824," transactions >> trans_cat.csv
+grep ",6202," transactions >> trans_cat.csv
+grep ",7205," transactions >> trans_cat.csv
+grep ",9115," transactions >> trans_cat.csv
+grep ",9909," transactions >> trans_cat.csv
+
+
+# R code to weed out junk rows that were accidentally picked up by grep.
+
+# If duplicates exist, getting rid of them is left as an exercise to the reader.
+
+trans_cat <- read.csv("trans_cat.csv",header=TRUE)
+nrow(trans_cat)
+table(trans_cat$category)
+
+trans_cat <- trans_cat[which(trans_cat$category %in% c(706,799,1703,1726,2119,2202,3203,3504,3509,4401,4517,5122,5558,5616,5619,5824,6202,7205,9115,9909)),]
+nrow(trans_cat)
+table(trans_cat$category)
